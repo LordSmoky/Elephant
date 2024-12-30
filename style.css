@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+        red,
+        yellow,
+        purple,
+        red
+    );
+    animation: changeColors 0.08s linear infinite;
+    
+}
+
+.elephan {
+    animation: rotate 1s infinite linear;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    transform-origin: center;
+}
+
+
+.sosage{
+    display: flex;
+    position: absolute;
+    width: 100px;
+    height: 500px;
+    background-color: #187100;
+    border-radius:0 0 40px 40px;
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+    margin-top: 100px;
+}
+
+.left_egg{
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #187100;
+    transform: translate(-50%, 0);
+    margin-left: 43%;
+    border-radius: 100px;
+    margin-top: 3%
+}
+
+.right_egg{
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #187100;
+    transform: translate(-50%, 0);
+    margin-left: 57%;
+    border-radius: 100px;
+    margin-top: 3%
+}
+
+.ebalo{
+    display: flex;
+    position: absolute;
+    width: 270px;
+    height: 300px;
+    background-color: #187100;
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+    border-radius: 100px;
+    margin-top: 10%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.eye{
+    display: flex;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-top: 10%;
+    align-items: center;
+    
+}
+
+.cataracta{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 100%;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    animation: left-right 0.1s infinite linear;
+}
+
+@keyframes left-right {
+    0% {
+        transform: translateX(0); /* Начальная позиция */
+    }
+    25% {
+        transform: translate(30px);
+    }
+    50% {
+        transform: translate(0);
+    }
+    75% {
+        transform: translate(-30px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes changeColors {
+    0% {
+        background: conic-gradient(
+            red,
+            yellow,
+            green,
+            blue,
+            purple,
+            red
+        );
+    }
+    25% {
+        background: conic-gradient(
+            yellow,
+            green,
+            blue,
+            purple,
+            red,
+            yellow
+        );
+    }
+    50% {
+        background: conic-gradient(
+            green,
+            blue,
+            purple,
+            red,
+            yellow,
+            green
+        );
+    }
+    75% {
+        background: conic-gradient(
+            blue,
+            purple,
+            red,
+            yellow,
+            green,
+            blue
+        );
+    }
+    100% {
+        background: conic-gradient(
+            purple,
+            red,
+            yellow,
+            green,
+            blue,
+            purple
+        );
+    }
+}
